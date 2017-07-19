@@ -1,5 +1,6 @@
 <% @poems.each do |poem| %>
-  <%= poem.title %>
-  <%= poem.content %>
+  <p>タイトル<%= poem.title %></p>
+  <p>内容<%= poem.content %></p>
+  <%= link_to "ポエムの詳細", poem, class: 'btn btn-primary' %>
 <% end %>
-<%= link_to "ポエムの詳細", new_blog_path, class: 'btn btn-default' %>
+

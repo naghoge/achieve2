@@ -1,2 +1,5 @@
-<%= poem.title %>
-<%= poem.content %>
+<strong>タイトル</strong>
+    <p><%= @poem.title %></p>
+<strong>ポエム</strong>
+    <p>内容<%= @poem.content %></p>
+<%= link_to "showへ", blog_path, class: 'btn btn-default btn-sm btn-primary' %>

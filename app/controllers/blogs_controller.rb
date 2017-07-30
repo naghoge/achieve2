@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action:set_blog, only:[:edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
   def index
@@ -7,7 +7,8 @@ class BlogsController < ApplicationController
   end
   
   def show
-    @blog = Blog.find(params[:id])  
+    @comment = @blog.comments.build
+    @comments = @blog.comments
   end
   
   def new
@@ -38,7 +39,9 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-    @blog.destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    # @blog.destroy
     redirect_to blogs_path, notice: "ブログを削除しました！"
   end
 

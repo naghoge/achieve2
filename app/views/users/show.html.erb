@@ -1,0 +1,17 @@
+<h3>フォロー一覧</h3>
+
+    <% @user.followed_users.each do |user| %>
+      <div class="container-child col-md-2 col-sm-4">
+        <%= profile_img(user) %>
+        <%= user.name %>
+      </div>
+    <% end %>
+    
+<h3>フォローワー一覧</h3>
+
+    <% @user.followers.each do |follwer| %>
+        <div class="container-child col-md-2 col-sm-4">
+            <%= profile_img(follwer) %>
+            <%= follwer.name %>
+        </div>
+    <% end %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'notifications/index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   #resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy, :show]do
@@ -7,6 +9,10 @@ Rails.application.routes.draw do
   #    post :confirm
   #  end
   # end
+  
+  resources :conversations do
+    resources :messages
+  end
   
   resources :blogs do
     resources :comments

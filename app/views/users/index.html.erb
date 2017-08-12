@@ -7,6 +7,15 @@
         <%= render 'follow_form', user: user %>
         <br>
         <%= link_to "ユーザ詳細", user_path(user), class: 'btn btn-default btn-sm btn-primary' %>
+        
+        <% if user.id != current_user.id %>
+        <li>
+          <div class="item">
+            <%= link_to user.name, user %>
+            <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+          </div>
+        </li>
+        <% end %>
       </div>
   <% end %>
 </div>

@@ -40,9 +40,9 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    # @blog.destroy
+    #@comment = Comment.find(params[:id])
+    # @comment.destroy
+    @blog.destroy
     redirect_to blogs_path, notice: "ブログを削除しました！"
   end
 

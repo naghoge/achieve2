@@ -58,8 +58,15 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
 gem 'fog'
+gem 'dotenv-rails'
+gem 'unicorn'
 gem 'rails_12factor', group: :production
 group :development do
   gem 'letter_opener_web'
   gem 'dotenv-rails'
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end

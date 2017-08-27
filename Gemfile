@@ -57,6 +57,7 @@ gem 'pusher'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-turbolinks'
+gem 'fog'
 gem 'rails_12factor', group: :production
 group :development do
   gem 'letter_opener_web'

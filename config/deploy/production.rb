@@ -7,7 +7,7 @@ lock '3.6.0'
 set :application, 'achieve'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/xxxxxxxx/yyyyyyyy'
+set :repo_url, 'https://github.com/naghoge/achieve2'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, ENV['BRANCH'] || 'master'

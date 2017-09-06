@@ -47,6 +47,7 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
 end
+
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'omniauth'
